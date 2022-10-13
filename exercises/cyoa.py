@@ -33,6 +33,7 @@ def main() -> None:
     
 def greet() -> None:
     """Greets the player and asks their name."""
+    print("Welcome!")
     print(f"{flower}Welcome to the multi-sided dice game!")
     print(f"{flower}This is a game where you see how many times you can guess")
     print(f"{flower}a random number on a dice of side number of your choosing.")

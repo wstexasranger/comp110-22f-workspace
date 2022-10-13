@@ -40,7 +40,7 @@ schools = {} # same as dict()
 # Alternatively, initialize key value pairs
 schools = {"UNC": 19999, "Duke": 16777, "NCSU": 29000}
 print(schools)
-
+print(len(schools))
 # What happens when a key does not exist?
 #print(schools["UNCC"])
 
