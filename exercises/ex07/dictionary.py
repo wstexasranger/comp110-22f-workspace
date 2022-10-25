@@ -1,11 +1,9 @@
 """The dictionary for the ex07 assignment."""
 __author__ = "730601447"
 
-from itertools import count
-
 
 def invert(stuff: dict[str, str]) -> dict[str, str]:
-    """Inverts an input dictionary and returns"""
+    """Inverts an input dictionary and returns."""
     returnDict: dict[str, str]
     returnDict = dict()
     for first in stuff:
@@ -13,6 +11,7 @@ def invert(stuff: dict[str, str]) -> dict[str, str]:
             raise KeyError(f"Already an instance of {stuff[first]} in the dictionary Keys!")
         returnDict[stuff[first]] = first
     return returnDict
+
 
 def favorite_color(stuff: dict[str, str]) -> str:
     """Returns most common color."""
@@ -37,15 +36,15 @@ def favorite_color(stuff: dict[str, str]) -> str:
                 returnStr = color
     return returnStr
 
-def count_dict(stuff: dict[str, str]) -> dict[str, int]:
-    """Returns most common color."""
+
+def count(stuff: list[str]) -> dict[str, int]:
+    """Returns dict with counts of each instance in the list of strs."""
     countDict: dict[str, str]
     countDict = dict()
-    returnStr: str = ""
     for keys in stuff:
         """Creates a numbered dict where Key : instances"""
-        if stuff[keys] in countDict:
-            countDict[stuff[keys]] = countDict[stuff[keys]] + 1
+        if keys in countDict:
+            countDict[keys] = countDict[keys] + 1
         else: 
-            countDict[stuff[keys]] = 1
-    return(countDict)
+            countDict[keys] = 1
+    return countDict
